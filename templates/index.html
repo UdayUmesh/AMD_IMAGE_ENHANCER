@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image to Enhance</h1>
+        <form id="upload-form">
+            <input type="file" id="file-input" name="file" accept="image/*" required>
+            <button type="submit">Enhance Image</button>
+        </form>
+        <div id="result" style="display: none;">
+            <h2>Enhanced Image</h2>
+            <img id="enhanced-image" src="" alt="Enhanced Image">
+            <a id="download-link" href="" download="enhanced_image.jpg">Download Enhanced Image</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
